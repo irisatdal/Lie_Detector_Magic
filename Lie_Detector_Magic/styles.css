@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+
+header {
+    width: 100%;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 6fr 1fr;
+    height: 100vh;
+}
+
+
+footer {
+    width: 100%;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+header {
+    display: flex;
+    /* center */
+    justify-content: center;
+    align-items: center;
+}
+
+
+#middle-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+#box1 {
+    background-color: #2f2f33;
+    display: flex;
+    /* center */
+    justify-content: center;
+    align-items: end;
+}
+
+
+#box2 {
+    background-color: #2f2f33;
+    display: flex;
+    /* center */
+    justify-content: center;
+    align-items: center;
+}
+
+
+#box3 {
+    background-color: #2f2f33;
+    display: flex;
+    /* center */
+    justify-content: center;
+    align-items: center;
+}
+
+
+#button-container {
+    display: flex;
+    /* center */
+    justify-content: center;
+    align-items: center;
+}
+
+#above_text {
+    color: white;
+    cursor: default;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+
+
+/* buttons manipulation */
+button {
+    width: 470px;
+    height: 180px;
+    background-color: white;
+    font-family: "Changa One", serif;
+    font-weight: 2000;
+    font-style: italic;
+    font-size: 40px;
+    border-radius: 90px;
+    border-style: none;
+    box-shadow: 5px 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+
+button:hover {
+    scale: 1.09;
+    border-radius: 1px;
+    font-size: 30px;
+}
+
+
+
+
+#header-text {
+    color: white;
+    font-size: 25px;
+    cursor: default;
+    font-family: "Fugaz One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#credit-text {
+    color: white;
+    padding-left: 20px;
+    padding-top: 10px;
+    cursor: default;
+    font-family: "Fugaz One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#linkedin_link {
+    color: antiquewhite;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+#linkedin_link:visited {
+    color: #fde6bc;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#linkedin_link:hover {
+    color: #ffdb90;
+    text-decoration: underline;
+}
+
+
+
+
+/* common TRUE and FALSE */
+#reveal-text {
+    color: white;
+    font-size: 100px;
+    cursor: default;
+    font-family: "Changa One", serif;
+    font-weight: 2000;
+    font-style: italic;
+}
+
+
+
+
+/* TRUE page */
+#true-middle-container {
+    background-color: #00a600;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#true-middle-box1 {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+
+#true-middle-box2 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+
+#true-video-overlay-box {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* make the video go in front of everything */
+    z-index: 10;
+    animation: fadeOutTrue 5.2s forwards; /* true is after 5.2s while false is after 5s */
+}
+
+@keyframes fadeOutTrue {
+    0% {
+        opacity: 1;
+    }
+    83% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        /* once the animation is done hide the element */
+        visibility: hidden;
+    }
+}
+
+
+#true-overlay-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* FALSE page */
+#false-middle-container {
+    background-color: red;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#false-middle-box1 {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+
+#false-middle-box2 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+
+#false-video-overlay-box {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* make the video go in front of everything */
+    z-index: 10;
+    animation: fadeOutFalse 5s forwards; /* true is after 5.2s while false is after 5s */
+}
+
+@keyframes fadeOutFalse {
+    0% {
+        opacity: 1;
+    }
+    83% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        /* once the animation is done hide the element */
+        visibility: hidden;
+    }
+}
+
+
+#false-overlay-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+#reset-text, #reset-text:visited{
+    color: white;
+    text-decoration: underline;
+    transition: 0.5s ease;
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+#reset-text:hover {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+}
