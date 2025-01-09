@@ -30,8 +30,8 @@ If on the left, the page is redirected to a new page that has a red background, 
 The key is to press the button generally in the middle, and only slightly to each side. If the button is pressed on the extreme left or right, the trick becomes obvious. 
 A few minutes of practice should help achieve smooth results. 
 
-### Example of Use
-#### Here is a simple description on how I pranked my friend:
+#### Example of Use
+##### Here is a simple description on how I pranked my friend:
 1. I asked him to state his name truthfully. Once he did, I pressed the button on screen, slightly on its right side.
      The page then displayed the loading animation and revealed a new green page that displayed the word "TRUE".
 3. I then clicked the reset button to reach the main button screen again.
